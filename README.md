@@ -1,5 +1,5 @@
 # DK's Maze !
-A little maze game, for an exercise from the Pygame course of Openclassroom.
+A little maze game, for an exercise from the Pygame course of Openclassrooms.
 
 ![Picture](https://i.goopics.net/7RKXN.jpeg)
 
