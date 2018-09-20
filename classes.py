@@ -13,10 +13,14 @@ class Game:
         self.selectpos = 0
 
     def home(self):
+        # Displays the background of the menu
+
         self.window.blit(home, (0, 0))
         pygame.display.flip()
 
     def select(self, level, move=False):
+        # Move the arrows according to the key pressed (Up / Down)
+
         if self.selectpos == 0:
             if move == True:
                 self.selectpos = 1
@@ -38,6 +42,8 @@ class Game:
         pygame.display.flip()
 
     def initlevel(self, level):
+        # We recover the lines of the level to reuse them
+
         name = "levels/lev" + str(level)
         with open(name, "r") as file:
             self.lines = file.readlines()
@@ -46,6 +52,8 @@ class Game:
         return self.lines
 
     def level(self, ending=False):
+        # The level is generated from the characters in the level file
+
         self.window.blit(background, (0, 0))
         y = 0
         for line in self.lines:
