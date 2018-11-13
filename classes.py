@@ -77,7 +77,8 @@ class Game:
 class Donkey:
     def __init__(self, window, level):
         self.window = window
-        self.lines = Game.initlevel(Game, level)
+        Gameinst = Game(window)
+        self.lines = Game.initlevel(Gameinst, level)
         self.win = 1
 
     def move(self, direction, pos_donkey):
